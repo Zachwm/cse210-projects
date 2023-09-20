@@ -6,9 +6,8 @@ class Program
     {   
         bool done = false;
 
-        Console.Write("What is the magic number? ");
-        string answerString = Console.ReadLine();
-        int answerInt = int.Parse(answerString);
+        Random rnd = new Random();
+        int answer  = rnd.Next(1, 10);
         
         while (!done)
         {
@@ -16,16 +15,16 @@ class Program
         string guessString = Console.ReadLine();
         int guessInt = int.Parse(guessString);
 
-        if (guessInt == answerInt)
+        if (guessInt == answer)
         {
             Console.Write("You guessed it!");
             done = true;
         }
-        else if (guessInt < answerInt)
+        else if (guessInt < answer)
         {
             Console.WriteLine("Higher");
         }
-        else if (guessInt > answerInt)
+        else if (guessInt > answer)
         {
             Console.WriteLine("Lower");
         }
