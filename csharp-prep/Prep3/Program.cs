@@ -1,30 +1,35 @@
+// Random Number Guessing Game
+// CSE 210
+// Zach McLaughlin
+// Generates a number giving the user unlimited attempts at guessing the int 1-10
+
 using System;
 
 class Program
 {
     static void Main(string[] args)
     {   
-        bool done = false;
+        bool zmDone = false;
 
-        Random rnd = new Random();
-        int answer  = rnd.Next(1, 10);
+        Random zmRnd = new Random();
+        int zmAnswer  = zmRnd.Next(1, 10);
         
-        while (!done)
+        while (!zmDone)
         {
         Console.Write("What is your guess? ");
-        string guessString = Console.ReadLine();
-        int guessInt = int.Parse(guessString);
+        string zmGuessString = Console.ReadLine();
+        int zmGuessInt = int.Parse(zmGuessString);
 
-        if (guessInt == answer)
+        if (zmGuessInt == zmAnswer)
         {
             Console.Write("You guessed it!");
-            done = true;
+            zmDone = true;
         }
-        else if (guessInt < answer)
+        else if (zmGuessInt < zmAnswer)
         {
             Console.WriteLine("Higher");
         }
-        else if (guessInt > answer)
+        else if (zmGuessInt > zmAnswer)
         {
             Console.WriteLine("Lower");
         }
