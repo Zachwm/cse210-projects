@@ -14,7 +14,8 @@ class Program
         Random zmRnd = new Random();
         int zmAnswer  = zmRnd.Next(1, 10);
         
-        while (!zmDone) {
+        while (!zmDone) 
+        {
             Console.Write("What is your guess? ");
             string zmGuessString = Console.ReadLine();
             int zmGuessInt = int.Parse(zmGuessString);
