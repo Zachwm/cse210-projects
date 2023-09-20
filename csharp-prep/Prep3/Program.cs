@@ -14,25 +14,24 @@ class Program
         Random zmRnd = new Random();
         int zmAnswer  = zmRnd.Next(1, 10);
         
-        while (!zmDone)
-        {
-        Console.Write("What is your guess? ");
-        string zmGuessString = Console.ReadLine();
-        int zmGuessInt = int.Parse(zmGuessString);
+        while (!zmDone) {
+            Console.Write("What is your guess? ");
+            string zmGuessString = Console.ReadLine();
+            int zmGuessInt = int.Parse(zmGuessString);
 
-        if (zmGuessInt == zmAnswer)
-        {
-            Console.Write("You guessed it!");
-            zmDone = true;
-        }
-        else if (zmGuessInt < zmAnswer)
-        {
-            Console.WriteLine("Higher");
-        }
-        else if (zmGuessInt > zmAnswer)
-        {
-            Console.WriteLine("Lower");
-        }
+            if (zmGuessInt == zmAnswer) 
+            {
+                Console.Write("You guessed it!");
+                zmDone = true;
+            }
+            else if (zmGuessInt < zmAnswer) 
+            {
+                Console.WriteLine("Higher");
+            }
+            else if (zmGuessInt > zmAnswer) 
+            {
+                Console.WriteLine("Lower");
+            }
         }
     }
 }
