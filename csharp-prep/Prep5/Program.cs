@@ -9,7 +9,6 @@ class Program
 {
     static void Main(string[] args)
     {
-
         zmMain();
     }
 
@@ -18,8 +17,8 @@ class Program
         zmDisplayWelcome();
         string zmName = zmPromptUserName();
         int zmNumber = zmPromptUserNumber();
-        double zmSquaredNumber = SquareNumber(zmNumber);
-        DisplayResult(zmName, zmSquaredNumber);
+        double zmSquaredNumber = zmSquareNumber(zmNumber);
+        zmDisplayResult(zmName, zmSquaredNumber);
     }
 
     static void zmDisplayWelcome()
@@ -40,13 +39,13 @@ class Program
         int zmNumInt = int.Parse(zmNumString);
         return zmNumInt;
     }
-    static double SquareNumber(int zmNumber)
+    static double zmSquareNumber(int zmNumber)
     {
         double zmNumSquared = zmNumber * zmNumber;
         return zmNumSquared;
     }
-    
-    static void DisplayResult(string zmName, double zmSquaredNumber);
+
+    static void zmDisplayResult(string zmName, double zmSquaredNumber)
     {
         Console.WriteLine($"{zmName}, the square of your number is {zmSquaredNumber}");
     }
