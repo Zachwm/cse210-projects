@@ -16,10 +16,10 @@ class Program
         job1._zmEndYear = 2022;
 
         Job job2 = new Job();
-        job1._zmJobTitle = "Manager";
-        job1._zmCompany = "Apple";
-        job1._zmStartYear = 2022;
-        job1._zmEndYear = 2023;
+        job2._zmJobTitle = "Manager";
+        job2._zmCompany = "Apple";
+        job2._zmStartYear = 2022;
+        job2._zmEndYear = 2023;
 
         Resume zmMyResume = new Resume();
         zmMyResume._zmName = "Zach McLaughlin";
