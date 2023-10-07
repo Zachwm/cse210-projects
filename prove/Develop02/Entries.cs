@@ -15,15 +15,15 @@ public class Entries {
         string response = Console.ReadLine();
 
         Entry newEntry = new Entry();
-        newEntry.prompt = randomPrompt;
-        newEntry.response = response;
+        newEntry._prompt = randomPrompt;
+        newEntry._response = response;
         entries.Add(newEntry);
     }
 
     public void Display() 
     {
         foreach(Entry entry in entries) {
-            Console.WriteLine($"\n{entry.date} - Prompt: {entry.prompt}\n{entry.response}");
+            Console.WriteLine($"\n{entry._date} - Prompt: {entry._prompt}\n{entry._response}");
         }
     }
     

@@ -14,9 +14,9 @@ class SaveAndLoad
             if (line.Length > 0) {
                 string[] entryAttributes = line.Split(",");
                 Entry newEntry = new Entry();
-                newEntry.date = entryAttributes[0];
-                newEntry.prompt = entryAttributes[1];
-                newEntry.response = entryAttributes[2];
+                newEntry._date = entryAttributes[0];
+                newEntry._prompt = entryAttributes[1];
+                newEntry._response = entryAttributes[2];
 
                 loadedEntries.Add(newEntry);
             }
@@ -32,9 +32,9 @@ class SaveAndLoad
         string entriesToSaveString = "";
         foreach (Entry entryToSave in entriesToSave) 
         {   
-            string response = $"\"{entryToSave.response.Replace("\"", "\"\"")}\"";
+            string response = $"\"{entryToSave._response.Replace("\"", "\"\"")}\"";
 
-            entriesToSaveString += $"{entryToSave.date},{entryToSave.prompt},{response}\n";
+            entriesToSaveString += $"{entryToSave._date},{entryToSave._prompt},{response}\n";
         }
 
         using (StreamWriter outputFile = new StreamWriter(userFileName))
