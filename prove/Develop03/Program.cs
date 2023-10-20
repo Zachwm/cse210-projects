@@ -1,4 +1,4 @@
-// Scriptre Memorizer
+// Scriputre Memorizer
 // CSE 210
 //The Earthworms 
 //Contributers: Zach McLaughlin, Tarin James, Austin Jones
